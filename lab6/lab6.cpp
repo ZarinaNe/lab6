@@ -22,7 +22,9 @@ int main()
         //Объект этой фабрики затем используется для создания элементов управления.
         switch (os) {
         case 1:
-            factory = (Factory*)new WinFactory();
+            //создает новый объект типа WinFactory и приводит его к указателю на базовый класс Factory. Такое приведение типов позволяет 
+            //сохранить объект типа WinFactory в указателе типа Factory, что упрощает работу с ним
+            factory = (Factory*)new WinFactory(); 
             break;
         case 2:
             factory = (Factory*)new LinuxFactory();
